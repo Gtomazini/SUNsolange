@@ -6,6 +6,7 @@ image solange = "images/chapter3/solange/sun_coffee1.png"
 # name of the character.
 
 define solange = Character("Solange")
+define person = Character("Unknown")
 
 # The game starts here.
 
@@ -13,13 +14,13 @@ label chapter3:
     # Background scene
     scene background_coffee
     # Narrator
-    "GLASH GLUP GLAP"
+    person "GLASH GLUP GLAP"
     # Player
     "What was that?"
 
     # Scream shake
     show layer master at scream_shake
-    "*Cough* *Cough*"
+    person "*Cough* *Cough*"
     pause 0.5 
     hide layer master
 
@@ -28,7 +29,7 @@ label chapter3:
 
     # Scream shake
     show layer master at scream_shake
-    "*Cough* *Cough*"
+    person "*Cough* *Cough*"
     pause 0.5
     hide layer master
 
@@ -37,7 +38,7 @@ label chapter3:
 
     # Scream shake
     show layer master at scream_shake
-    "*Cough* *Cough*"
+    person "*Cough* *Cough*"
     pause 0.5
     hide layer master
 
@@ -46,7 +47,7 @@ label chapter3:
 
     # Solange
     show solange at center
-    "Yes"
+    person "Yes"
 
     # Player
     "Okay"
