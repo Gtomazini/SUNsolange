@@ -7,10 +7,11 @@ image background_quintal = "images/quintal_sala.png"
 define e = Character("Aunt Sol")
 #efects
 transform scream_shake:
-    xoffset 10  # Mova 10 pixels à direita
-    linear 0.05 xoffset -10  # Mova 10 pixels à esquerda
-    linear 0.05 xoffset 10  # Repete o movimento
-    repeat 5  # Repete o movimento 5 vezes (ajuste conforme necessário)
+    ease 0.05 xoffset 10
+    ease 0.05 xoffset -10
+    ease 0.05 xoffset 10
+    ease 0.05 xoffset 0
+    repeat 5
 
 # The game starts here.
 
@@ -18,7 +19,8 @@ label chapter1:
 
     scene background_quintal
     "it's a nice day"
-    scene background_quintal with scream_shake
+    scene background_quintal
+    show layer master at scream_shake
     "CRACK CRACK BTHUMP"
 
 #Olhar para a janela SOLANGE CAIDA NA LIXEIRA
