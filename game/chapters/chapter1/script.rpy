@@ -5,8 +5,6 @@ image background_quintal = "images/quintal_sala.png"
 # name of the character.
 
 define e = Character("Aunt Sol")
-define u = Character("{you}")
-define v = Character("Heat")
 #efects
 transform scream_shake:
     xoffset 10  # Mova 10 pixels à direita
@@ -16,7 +14,7 @@ transform scream_shake:
 
 # The game starts here.
 
-label :
+label chapter1:
     "it's a nice[VAR] day"
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
