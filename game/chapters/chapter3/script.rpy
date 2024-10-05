@@ -5,54 +5,54 @@ image solange = "../Concepts/sun_coffee"
 
 # name of the character.
 
-define solange = ("Solange")
+define solange = Character("Solange")
 
 # The game starts here.
 
 label chapter3:
-# Background scene
+    # Background scene
     scene background_coffee
-# Narrator
-"GLASH GLUP GLAP"
-# Player
-"What was that?"
+    # Narrator
+    "GLASH GLUP GLAP"
+    # Player
+    "What was that?"
 
-# Scream shake
-show layer master at scream_shake
-"TOSSE TOSSE"
-pause 0.5 
-hide layer master
+    # Scream shake
+    show layer master at scream_shake
+    "TOSSE TOSSE"
+    pause 0.5 
+    hide layer master
 
-# Player
-"Are you okay?"
+    # Player
+    "Are you okay?"
 
-# Scream shake
-show layer master at scream_shake
-"TOSSE TOSSE"
-pause 0.5
-hide layer master
+    # Scream shake
+    show layer master at scream_shake
+    "TOSSE TOSSE"
+    pause 0.5
+    hide layer master
 
-# Player
-"Yeah.."
+    # Player
+    "Yeah.."
 
-# Scream shake
-show layer master at scream_shake
-"TOSSE TOSSE"
-pause 0.5
-hide layer master
+    # Scream shake
+    show layer master at scream_shake
+    "TOSSE TOSSE"
+    pause 0.5
+    hide layer master
 
-# Player
-"..."
+    # Player
+    "..."
 
-# Solange
-show image solange
-"Sim"
+    # Solange
+    show sun at center
+    "Sim"
 
-# Player
-"Tá"
+    # Player
+    "Tá"
 
-# Player
-"..."
+    # Player
+    "..."
 
 
-return
+    return
