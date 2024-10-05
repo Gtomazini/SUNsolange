@@ -7,7 +7,6 @@ image background_solixo = "images/quintal_lixo.png"
 # name of the character.
 
 define e = Character("Aunt Sol")
-define u = Character("You")
 #efects
 transform scream_shake:
     ease 0.05 xoffset 10
@@ -26,8 +25,8 @@ label chapter1:
     "What's this"
     "He looked out of the window and saw Aunt Sol lying on the ground"
     scene background_solixo
-    u "It's Aunt SOL"
-    u "What's she doing?"
+    player "It's Aunt SOL"
+    player "What's she doing?"
     scene background_quintal
     "You hear strange noises"
 
