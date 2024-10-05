@@ -9,7 +9,7 @@ define e = Character("Eileen")
 
 label start:
     # Chama o script do Capítulo 1
-    call chapter1_script
+    #call chapter1_script
 
     # O código abaixo só será executado após o retorno do chapter1_script
     scene bg room
