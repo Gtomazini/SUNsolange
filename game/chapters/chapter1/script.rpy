@@ -5,8 +5,6 @@ image background_quintal = "images/quintal_sala.png"
 # name of the character.
 
 define e = Character("Aunt Sol")
-define u = Character("{you}")
-define v = Character("Heat")
 #efects
 transform scream_shake:
     xoffset 10  # Mova 10 pixels à direita
