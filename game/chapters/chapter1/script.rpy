@@ -1,6 +1,5 @@
 # The script of the game goes in this file.
 image background_quintal = "images/quintal_sala.png"
-
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -9,8 +8,7 @@ define e = Character("Aunt Sol")
 
 # The game starts here.
 
-label start:
-
+label chapter1:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -25,7 +23,7 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    e "Script do Matheus"
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
