@@ -11,6 +11,7 @@ label start:
 
     # Solicita o nome do jogador
     $ player_name = renpy.input("Qual é o seu nome?")
+    # Se ficar vazio vai colocar nome de jogador
     $ player_name = player_name.strip() or "Jogador" 
 
     menu:
