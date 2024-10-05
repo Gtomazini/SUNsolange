@@ -10,7 +10,7 @@ define player = Character("[player_name]")
 label start:
 
     # Requests the player's name
-    $ player_name = renpy.input("Qual é o seu nome?")
+    $ player_name = renpy.input("What's your name?")
     # If it's empty, you'll put a 'Player' name on it
     $ player_name = player_name.strip() or "Player" 
     # Request the player's age
