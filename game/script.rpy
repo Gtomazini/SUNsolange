@@ -4,15 +4,24 @@
 # name of the character.
 
 define player = Character("[player_name]")
+define age 
 
 # The game starts here.
 
 label start:
 
-    # Solicita o nome do jogador
+    # Requests the player's name
     $ player_name = renpy.input("Qual é o seu nome?")
-    # Se ficar vazio vai colocar nome de jogador
-    $ player_name = player_name.strip() or "Jogador" 
+    # If it's empty, you'll put a 'Player' name on it
+    $ player_name = player_name.strip() or "Player" 
+    # Request the player's age
+    $ player_age = renpy.input("How old are you?")
+    
+    # Checks if the value entered is a number
+    while not player_age.isdigit():
+        $ player_age = renpy.input("Please enter a valid number for your age.")
+    # Convert age to an integer
+    $ player_age = int(player_age)
 
     menu:
         "Escolha um capítulo:"

@@ -1,22 +1,30 @@
-# The script of the game goes in this file.
+# Back ground image
 image background_escola = "images/corredor_escola.png"
 
-# Declare characters used by this game. The color argument colorizes the
 # name of the character.
+
+define solange = ("Solange")
 
 # The game starts here.
 
 label chapter2:
-# Seta o fundo da cena
+# Background scene
     scene background_escola
-# Função que treme a tela
+# Scream shake
     show layer master at scream_shake
-
-
+# Narrator
     "CRAMB CRAMB TCHUMM"
-
-# Personagem principal
+# Player
     player "What was that?!"
-    player "What's she doing?"
+# Image of the fallen veteran
+#
+    player "'What's she doing?'"
+    player "Hey..."    
+# Image of the frightened veteran 
+#
+# Scream shake
+    show layer master at scream_shake
+    solange "YAHAH!!!!"
+
 
     return
