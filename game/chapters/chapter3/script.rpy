@@ -1,5 +1,7 @@
 # Back ground image
 image background_coffee = "images/chapter3/coffee.png"
+# Solange
+image solange = "../Concepts/sun_coffee"
 
 # name of the character.
 
@@ -38,5 +40,19 @@ show layer master at scream_shake
 "TOSSE TOSSE"
 pause 0.5
 hide layer master
+
+# Player
+"..."
+
+# Solange
+show image solange
+"Sim"
+
+# Player
+"Tá"
+
+# Player
+"..."
+
 
 return
