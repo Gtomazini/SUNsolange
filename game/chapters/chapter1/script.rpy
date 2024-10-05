@@ -1,10 +1,14 @@
 # The script of the game goes in this file.
-image background_quintal = "images/quintal_sala.png"
+image background_room = "images/quintal_sala.png"
+image background_quintal = "images/quintal_quintal"
+image background_sala = "images/quintal_sala"
+image background_solixo = "images/quintal_lixo"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
 define e = Character("Aunt Sol")
+define u = Character("You")
 #efects
 transform scream_shake:
     ease 0.05 xoffset 10
@@ -16,21 +20,20 @@ transform scream_shake:
 # The game starts here.
 
 label chapter1:
+    scene background_room
     "it's a nice day"
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene background_quintal
-    "it's a nice day"
-    scene background_quintal
     show layer master at scream_shake
     "CRACK CRACK BTHUMP"
+    "What's this"
+    scene background_sala
+    "He looked out of the window and saw Aunt Sol lying on the ground"
+    scene background_solixo
+    u "It's Aunt SOL"
+    u "What's she doing?"
+    scene background_quintal
+    "You hear strange noises"
 
-#Olhar para a janela SOLANGE CAIDA NA LIXEIRA
-    show eileen happy
-    e "It's Aunt SOL"
-    e "What's she doing"
+
     
     # This ends the game.
 
