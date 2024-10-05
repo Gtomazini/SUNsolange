@@ -14,7 +14,7 @@ label chapter3:
     # Background scene
     scene background_coffee
     # Narrator
-    person "GLASH GLUP GLAP"
+    person "*GLASH* *GLUP* *GLAP*"
     # Player
     "What was that?"
 
