@@ -17,7 +17,7 @@ transform scream_shake:
 label chapter1:
 
     scene background_quintal
-    "it's a nice[VAR] day"
+    "it's a nice day"
     scene background_quintal with scream_shake
     "CRACK CRACK BTHUMP"
 
