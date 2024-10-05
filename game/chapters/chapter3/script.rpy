@@ -1,7 +1,7 @@
 # Back ground image
 image background_coffee = "images/chapter3/coffee.png"
 # Solange
-image solange = "../Concepts/sun_coffee"
+image solange = "images/chapter3/solange/sun_coffee1.png"
 
 # name of the character.
 
@@ -19,7 +19,7 @@ label chapter3:
 
     # Scream shake
     show layer master at scream_shake
-    "TOSSE TOSSE"
+    "*Cough* *Cough*"
     pause 0.5 
     hide layer master
 
@@ -28,7 +28,7 @@ label chapter3:
 
     # Scream shake
     show layer master at scream_shake
-    "TOSSE TOSSE"
+    "*Cough* *Cough*"
     pause 0.5
     hide layer master
 
@@ -37,7 +37,7 @@ label chapter3:
 
     # Scream shake
     show layer master at scream_shake
-    "TOSSE TOSSE"
+    "*Cough* *Cough*"
     pause 0.5
     hide layer master
 
@@ -45,11 +45,11 @@ label chapter3:
     "..."
 
     # Solange
-    show sun at center
-    "Sim"
+    show solange at center
+    "Yes"
 
     # Player
-    "Tá"
+    "Okay"
 
     # Player
     "..."
