@@ -1,8 +1,7 @@
 # The script of the game goes in this file.
 image background_room = "images/quintal_sala.png"
-image background_quintal = "images/quintal_quintal"
-image background_sala = "images/quintal_sala"
-image background_solixo = "images/quintal_lixo"
+image background_quintal = "images/quintal_quintal.png"
+image background_solixo = "images/quintal_lixo.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -25,7 +24,6 @@ label chapter1:
     show layer master at scream_shake
     "CRACK CRACK BTHUMP"
     "What's this"
-    scene background_sala
     "He looked out of the window and saw Aunt Sol lying on the ground"
     scene background_solixo
     u "It's Aunt SOL"
