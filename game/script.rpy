@@ -4,7 +4,6 @@
 # name of the character.
 
 define player = Character("[player_name]")
-define age 
 
 # The game starts here.
 
