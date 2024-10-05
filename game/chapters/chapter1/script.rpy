@@ -16,7 +16,7 @@ transform scream_shake:
 
 # The game starts here.
 
-label :
+label chapter1 :
     "it's a nice[VAR] day"
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
