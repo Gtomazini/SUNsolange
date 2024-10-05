@@ -3,12 +3,16 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define player = Character("[player_name]")
 
 # The game starts here.
 
 label start:
-    # Menu principal com três opções
+
+    # Solicita o nome do jogador
+    $ player_name = renpy.input("Qual é o seu nome?")
+    $ player_name = player_name.strip() or "Jogador" 
+
     menu:
         "Escolha um capítulo:"
         
