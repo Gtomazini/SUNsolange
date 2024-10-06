@@ -61,7 +61,7 @@ Cafeteria - Jazz Bossa Nova by Lolurio
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "SUNsolange"
+define build.name = "SonsofLight"
 
 
 ## Sounds and music ############################################################
