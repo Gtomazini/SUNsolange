@@ -75,8 +75,20 @@ label start_ph_test:
         call screen ph_game
         $ result = _return
         "[result]"
+
+        # Verifica o resultado da resposta
         if "Correct" in result:
+            # Define o volume do canal de som
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            # Toca o som de sucesso
+            $ renpy.sound.play("audio/sucess.mp3", channel="sound")
             $ correct_answer = True
+        else:
+            # Define o volume do canal de som
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            # Toca o som de erro
+            $ renpy.sound.play("audio/ERROU.mp3", channel="sound")
+
     hide sol_test_ph
     "You've completed the pH test correctly!"
     jump start_temp_test
@@ -92,8 +104,18 @@ label start_temp_test:
         call screen temp_game
         $ result = _return
         "[result]"
+
+        # Verifica o resultado da resposta
         if "Correct" in result:
+            # Define o volume e toca o som de sucesso
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            $ renpy.sound.play("audio/sucess.mp3", channel="sound")
             $ correct_answer = True
+        else:
+            # Define o volume e toca o som de erro
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            $ renpy.sound.play("audio/ERROU.mp3", channel="sound")
+
     hide sol_test_temp
     "You've completed the temperature test correctly!"
     jump start_oxygen_test
@@ -109,11 +131,21 @@ label start_oxygen_test:
         call screen oxygen_game
         $ result = _return
         "[result]"
+
+        # Verifica o resultado da resposta
         if "Correct" in result:
+            # Define o volume e toca o som de sucesso
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            $ renpy.sound.play("audio/sucess.mp3", channel="sound")
             $ correct_answer = True
+        else:
+            # Define o volume e toca o som de erro
+            $ renpy.sound.set_volume(0.5, channel="sound")
+            $ renpy.sound.play("audio/ERROU.mp3", channel="sound")
+
     hide sol_test_o2
     "You've completed the oxygen test correctly!"
-    jump final_score  # Muda para a tela de pontuação
+    jump final_score
 
 # Tela de pontuação final
 label final_score:
@@ -174,13 +206,16 @@ screen temp_game:
                 xalign 0.5
                 spacing 10
                 textbutton "Cold" action Return(game.check_temperature("Cold")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
                 textbutton "Moderate" action Return(game.check_temperature("Moderate")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
                 textbutton "Hot" action Return(game.check_temperature("Hot")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
 
             text "[feedback]" size 20 xalign 0.5
@@ -205,13 +240,16 @@ screen oxygen_game:
                 xalign 0.5
                 spacing 10
                 textbutton "Low" action Return(game.check_oxygen("Low")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
                 textbutton "Moderate" action Return(game.check_oxygen("Moderate")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
                 textbutton "High" action Return(game.check_oxygen("High")):
-                    text_size 40
+                    text_size 45
+                    text_color "#ffffff"
                     text_outlines [(2, "#000000", 0, 0)]
 
             text "[feedback]" size 20 xalign 0.5
