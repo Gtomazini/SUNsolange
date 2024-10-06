@@ -95,7 +95,13 @@ label pathE1:
     such as surface temperature, using scientific methods. My project simulates, on a small scale,
     what GLOBE studies globally. This helps understand how different surfaces affect local and global climate."
 
-    return
+    player "So..what are your project based on?"
+
+    hide solange_hc
+    show solange
+    solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
+    as its variations depending on the location and materials affected by sunlight. I'll show you an example"
+    jump start_temp_game
 
 label pathE2:
     # Solange
@@ -104,7 +110,13 @@ label pathE2:
     solange "YES!! I don't believe i found someone who knows and cares about environmental issues!!
     Points for you!!"
 
-    return
+    player "So..what are your project based on?"
+
+    hide solange_h
+    show solange
+    solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
+    as its variations depending on the location and materials affected by sunlight. I'll show you an example"
+    jump start_temp_game
 
 label pathE3:
     # Solange
@@ -114,4 +126,7 @@ label pathE3:
     hide solange_hc
     show solange
     solange "Globe Protocol is not about global law programs, but rather a global
-    effort to collect data about our environment, I'll show you!"
+    effort to collect data about our environment, I'll show you an example!"
+    jump start_temp_game
+
+    return
