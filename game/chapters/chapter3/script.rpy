@@ -2,8 +2,9 @@
 image background_coffee = "images/chapter3/coffee.png"
 # Solange
 image solange = "images/chapter3/solange/sun_coffee_empty.png"
-# Solange
 image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
+image solange_hc = "images/chapter3/solange/sun_coffee_hc.png"
+
 
 # name of the character.
 
@@ -88,12 +89,17 @@ label pathE:
 
 label pathE1:
     # Solange
-    solange ""
+    hide solange
+    show solange_hc
+    solange "Yes, the GLOBE Protocol is a program where ordinary people collect environmental data,
+    such as surface temperature, using scientific methods. My project simulates, on a small scale,
+    what GLOBE studies globally. This helps understand how different surfaces affect local and global climate."
 
     return
 
 label pathE2:
     # Solange
+    hide solange
     show solange_h at center
     solange "YES!! I don't believe i found someone who knows and cares about environmental issues!!
     Points for you!!"
@@ -102,4 +108,10 @@ label pathE2:
 
 label pathE3:
     # Solange
-    solange ""
+    hide solange
+    show solange_hc
+    solange "No ! No, that's not it, if it were a test you'd get a zero hahaha"
+    hide solange_hc
+    show solange
+    solange "Globe Protocol is not about global law programs, but rather a global
+    effort to collect data about our environment, I'll show you!"
