@@ -1,4 +1,4 @@
-  # Declarações de imagens
+# Declarações de imagens
 image cirrus_cloud = "images/chapter2/cirrus_cloud.jpg"
 image altocumulus_cloud = "images/chapter2/altocumulus_cloud.jpg"
 image stratus_cloud = "images/chapter2/stratus_cloud.jpg"
