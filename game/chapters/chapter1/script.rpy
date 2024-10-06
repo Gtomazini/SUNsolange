@@ -40,7 +40,7 @@ label chapter1:
     scene background_quintal
     "You're going to open the fence door"
     #som de cerca abrindo
-    show sol at center
+    show AuntSol at center
     "Aunt Sol look sad because my ph meter is broken"
     player "What's happening ?"
     "Aunt Sol have an idea and disappears"
@@ -48,7 +48,13 @@ label chapter1:
     #SOL IMAGE WITH A NEW PH MESUIR
     sol "Here, take a sample for me"
     player "What?"
-    sol "{fast}For a precise analysis of aquatic pH, we used a glass electrode combined with a silver/silver chloride reference electrode, calibrated with phosphate and phthalate buffer solutions. Potentiometric measurement is based on the Nernst equation, taking into account the activity of hydronium ions in solution. It is crucial to take into account ionic strength, temperature and liquid junction effects. We use potentiometric titration techniques to determine alkalinity and acidity, using indicators such as phenolphthalein and methyl orange. Data interpretation requires chemical speciation analysis, considering complex acid-base balances in natural aquatic systems, including the carbonate system and the presence of humic and fulvic acids which can significantly affect the pH and buffering capacity of water"
+    sol "{fast}For a precise analysis of aquatic pH, we used a glass electrode combined with a silver/silver chloride reference electrode,
+calibrated with phosphate and phthalate buffer solutions."
+    sol "{fast} Potentiometric measurement is based on the Nernst equation, taking into account the activity of hydronium ions in solution. It is crucial to take into account ionic strength,
+temperature and liquid junction effects. "
+    sol "{fast}We use potentiometric titration techniques to determine alkalinity and acidity, using indicators such as phenolphthalein and methyl orange.
+Data interpretation requires chemical speciation analysis, considering complex acid-base balances in natural aquatic systems,
+including the carbonate system and the presence of humic and fulvic acids which can significantly affect the pH and buffering capacity of water"
     #NARRETOR
     "You DO NOT understand anything"
     #dialogue
