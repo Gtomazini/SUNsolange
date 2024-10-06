@@ -1,9 +1,4 @@
-# Defina seus personagens e imagens no início do arquivo
-define sol = Character("Sol")  # Defina o personagem Sol, se necessário
-image background_river = "background_river.png"  # Certifique-se de que o nome do arquivo está correto
-image sol_test_ph = "sol_test_ph.png"  # Certifique-se de que o nome do arquivo está correto
 
-# O jogo começa aqui.
 label mini_game_start:
     "Bem-vindo ao jogo ambiental! Você precisa realizar 3 testes ambientais para garantir a qualidade da água."
     "Está pronto para começar?"
@@ -32,9 +27,10 @@ init python:
                 correct_answer = "alkaline"
 
             if guess == correct_answer:
-                self.score += 1
+                self.score += 10
                 return "Correto! O pH era {}. Você acertou!".format(correct_answer.capitalize())
             else:
+                self.score -5
                 return "Errado! Tente novamente."
 
         # Teste de temperatura
@@ -48,9 +44,10 @@ init python:
                 correct_answer = "quente"
 
             if guess == correct_answer:
-                self.score += 1
+                self.score += 10
                 return "Correto! A temperatura da água era {}ºC. Você acertou!".format(target_temp)
             else:
+                self.score -5
                 return "Errado! Tente novamente."
 
         # Teste de oxigênio
@@ -64,9 +61,10 @@ init python:
                 correct_answer = "alto"
 
             if guess == correct_answer:
-                self.score += 1
+                self.score += 10
                 return "Correto! O nível de oxigênio era {} mg/L. Você acertou!".format(target_oxygen)
             else:
+                self.score -5
                 return "Errado! Tente novamente."
 
 # Instância do jogo criada uma vez
@@ -74,7 +72,7 @@ default game = EnvGame()
 
 # Teste 1: Medição de pH da água
 label start_ph_test:
-    scene background_river  # Define o background para o teste de pH
+    scene background_river with fade  # Define o background para o teste de pH
     show sol_test_ph at right  # Mostra a personagem Sol à direita
     $ feedback = "Escolha uma opção:"
     $ correct_answer = False
@@ -137,6 +135,8 @@ label final_score:
 # Tela do teste de pH
 screen ph_game:
     frame:
+        add "background_river"
+        add "sol_test_ph" at right
         xfill True
         yfill True
         vbox:
@@ -144,15 +144,29 @@ screen ph_game:
             yalign 0.5
             spacing 20
 
-            text "Teste de pH" size 30 xalign 0.5
-            text "Escolha se o pH da água é ácido, neutro ou alcalino."
+            text "Teste de pH" size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
+            text "Escolha se o pH da água é ácido, neutro ou alcalino." size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
 
             hbox:
                 xalign 0.5
                 spacing 10
-                textbutton "Ácido" action Return(game.check_ph("acid"))
-                textbutton "Neutro" action Return(game.check_ph("neutral"))
-                textbutton "Alcalino" action Return(game.check_ph("alkaline"))
+                # Botão Ácido (personalizado diretamente)
+                textbutton "Ácido" action Return(game.check_ph("acid")):
+                    text_size 40
+                    text_color "#FF0000"  # Cor vermelha
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+
+                # Botão Neutro (personalizado diretamente)
+                textbutton "Neutro" action Return(game.check_ph("neutral")):
+                    text_size 40
+                    text_color "#04a119"  # Cor verde
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+
+                # Botão Alcalino (personalizado diretamente)
+                textbutton "Alcalino" action Return(game.check_ph("alkaline")):
+                    text_size 40
+                    text_color "#6d0370"  # Cor roxa
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
 
             # Mensagem de feedback
             text "[feedback]" size 20 xalign 0.5
