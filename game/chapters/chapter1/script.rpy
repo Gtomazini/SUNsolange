@@ -10,6 +10,7 @@ image solthermo = "images/chapter1/so_thermo.png"
 image sol_thermo_water = "images/chapter1/sol_thermo_water.png"
 image sol_ideia = "images/chapter1/sol_ideia.png"
 image sol_default = "images/chapter1/sol_default.png"
+image sol_test_ph = "images/chapter1/sol_test_ph.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -127,7 +128,30 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
     show sol_default at center
     sol "Now to the challenge"
     #botão de iniciar
+    menu:
+        "Sim, vamos começar!":
+            jump start_ph_test
+        "Não, talvez mais tarde.":
+            "Ok, até a próxima!"
+            return
 
-    # This ends the game.
+    # Label para chamar o mini-jogo
+    label start_mini_game:
+        "Vamos jogar um mini-jogo!"
+        jump mini_game_start  # Chama o mini-jogo que está no mini_game.rpy
+
+    # Tela para oferecer o mini-jogo
+    label offer_mini_game:
+        "Você gostaria de jogar um mini-jogo?"
+        
+        menu:
+            "Sim":
+                jump start_mini_game  # Inicia o mini-jogo
+            "Mais tarde":
+                jump start  # Retorna ao menu principal
+
+        # Teste de pH, temperatura e oxigênio continua aqui...
+
+        # This ends the game.
 
     return
