@@ -11,6 +11,7 @@ image sol_thermo_water = "images/chapter1/sol_thermo_water.png"
 image sol_ideia = "images/chapter1/sol_ideia.png"
 image sol_default = "images/chapter1/sol_default.png"
 image sol_test_ph = "images/chapter1/sol_test_ph.png"
+image sol_test_o2 = "images/chapter1/sol_test_o2.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -63,8 +64,8 @@ label chapter1:
 calibrated with phosphate and phthalate buffer solutions."
     sol "{fast} Potentiometric measurement is based on the Nernst equation, taking into account the activity of hydronium ions in solution. It is crucial to take into account ionic strength,
 temperature and liquid junction effects. "
-    sol "{fast}We use potentiometric titration techniques to determine alkalinity and acidity, using indicators such as phenolphthalein and methyl orange.
-Data interpretation requires chemical speciation analysis, considering complex acid-base balances in natural aquatic systems,
+    sol "{fast}We use potentiometric titration techniques to determine alkalinity and acidity, using indicators such as phenolphthalein and methyl orange."
+    sol "{fast}Data interpretation requires chemical speciation analysis, considering complex acid-base balances in natural aquatic systems,
 including the carbonate system and the presence of humic and fulvic acids which can significantly affect the pH and buffering capacity of water"
     #NARRETOR
     "You DO NOT understand anything"
@@ -85,8 +86,8 @@ including the carbonate system and the presence of humic and fulvic acids which 
     menu :
         "No":
             "No problem, you'll learn, To find out, we use a device called a pH meter!"
-        "YESSS":   
-            "To find out, we use a device called a pH meter!"
+        "YES":   
+            "Very Good,To find out, we use a device called a pH meter!"
     sol "The pH meter looks like a ruler with a needle that moves. When we dip the tip into the water, the needle shows a number that helps us know if the water is good to drink."
     sol "First, we need to make sure the pH meter is clean. Then, we take a glass of the water we want to test, like tap water or water from a lake."
     sol "Now, we dip the tip of the pH meter into the water and count to three. The needle starts to move and stops at a number. This number tells us if the water is acidic, neutral, or alkaline!"
@@ -127,28 +128,30 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
     sol "See! The number that appears on the thermometer tells us if the water is cold, warm, or hot."
     hide sol_thermo_water
     show sol_default at center
+    sol "Remember that we will be using water from the Paraíba do Sul River, which passes through our city of São José dos Campos."
+    sol "But you can find any data for your region on GLOBE PROTOCOL"
     sol "Now to the challenge"
     #botão de iniciar
     menu:
-        "Sim, vamos começar!":
+        "Yes, let's get started!":
             jump start_ph_test
-        "Não, talvez mais tarde.":
-            "Ok, até a próxima!"
+        "No, maybe later.":
+            "Okay, see you next time!"
             return
 
     # Label para chamar o mini-jogo
     label start_mini_game:
-        "Vamos jogar um mini-jogo!"
+        "Let's play a mini-game!"
         jump mini_game_start  # Chama o mini-jogo que está no mini_game.rpy
 
     # Tela para oferecer o mini-jogo
     label offer_mini_game:
-        "Você gostaria de jogar um mini-jogo?"
+        "Would you like to play a mini-game?"
         
         menu:
-            "Sim":
+            "YES":
                 jump start_mini_game  # Inicia o mini-jogo
-            "Mais tarde":
+            "No, maybe later.":
                 jump start  # Retorna ao menu principal
 
         # Teste de pH, temperatura e oxigênio continua aqui...

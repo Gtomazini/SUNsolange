@@ -18,7 +18,7 @@ init python:
 
         # Teste de pH
         def check_ph(self, guess):
-            target_pH = 6.8  # pH médio do rio
+            target_pH = 7  # pH médio do rio
             if target_pH < 3:
                 correct_answer = "acid"
             elif 4 <= target_pH <= 7:
@@ -35,7 +35,7 @@ init python:
 
         # Teste de temperatura
         def check_temperature(self, guess):
-            target_temp = 26.4  # Temperatura média do rio
+            target_temp = 24  # Temperatura média do rio
             if target_temp < 15:
                 correct_answer = "fria"
             elif 15 <= target_temp <= 30:
@@ -52,7 +52,7 @@ init python:
 
         # Teste de oxigênio
         def check_oxygen(self, guess):
-            target_oxygen = 7.5  # Nível médio de oxigênio no rio
+            target_oxygen = 5  # Nível médio de oxigênio no rio
             if target_oxygen < 4:
                 correct_answer = "baixo"
             elif 4 <= target_oxygen <= 8:
@@ -93,7 +93,7 @@ label start_ph_test:
 # Teste 2: Verificação da Temperatura da Água
 label start_temp_test:
     scene background_river  # Define o background para o teste de temperatura
-    show sol_test_ph at right  # Mostra a personagem Sol à direita
+    show sol_test_temp at right  # Mostra a personagem Sol à direita
     $ feedback = "Escolha uma opção:"
     $ correct_answer = False
     while not correct_answer:
@@ -103,14 +103,14 @@ label start_temp_test:
         "[result]"  # Mostra o feedback do resultado
         if "Correto" in result:
             $ correct_answer = True
-    hide sol_test_ph  # Esconde a personagem após o teste
+    hide sol_test_temp  # Esconde a personagem após o teste
     "Você concluiu o teste de temperatura corretamente!"
     jump start_oxygen_test  # Passa para o teste de oxigênio
 
 # Teste 3: Verificação de Oxigênio Dissolvido na Água
 label start_oxygen_test:
     scene background_river  # Define o background para o teste de oxigênio
-    show sol_test_ph at right  # Mostra a personagem Sol à direita
+    show sol_test_o2 at right  # Mostra a personagem Sol à direita
     $ feedback = "Escolha uma opção:"
     $ correct_answer = False
     while not correct_answer:
@@ -120,7 +120,7 @@ label start_oxygen_test:
         "[result]"  # Mostra o feedback do resultado
         if "Correto" in result:
             $ correct_answer = True
-    hide sol_test_ph  # Esconde a personagem após o teste
+    hide sol_test_o2  # Esconde a personagem após o teste
     "Você concluiu o teste de oxigênio corretamente!"
     jump final_score  # Finaliza os testes e exibe a pontuação
 
@@ -144,8 +144,8 @@ screen ph_game:
             yalign 0.5
             spacing 20
 
-            text "Teste de pH" size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
-            text "Escolha se o pH da água é ácido, neutro ou alcalino." size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
+            text "PH test" size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
+            text "Choose whether the pH of the water is acidic, neutral or alkaline according to the result in Sol's hand" size 45 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
 
             hbox:
                 xalign 0.5
@@ -174,6 +174,8 @@ screen ph_game:
 # Tela do teste de temperatura
 screen temp_game:
     frame:
+        add "background_river"
+        add "sol_test_temp" at right
         xfill True
         yfill True
         vbox:
@@ -181,15 +183,22 @@ screen temp_game:
             yalign 0.5
             spacing 20
 
-            text "Teste de Temperatura" size 30 xalign 0.5
-            text "Escolha se a temperatura da água é fria, moderada ou quente."
+            text "Teste de Temperatura" size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
+            text "Escolha se a temperatura da água é fria, moderada ou quente." size 45 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
 
             hbox:
                 xalign 0.5
                 spacing 10
-                textbutton "Fria" action Return(game.check_temperature("fria"))
-                textbutton "Moderada" action Return(game.check_temperature("moderada"))
-                textbutton "Quente" action Return(game.check_temperature("quente"))
+                textbutton "Fria" action Return(game.check_temperature("fria")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+
+                textbutton "Moderada" action Return(game.check_temperature("moderada")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+                textbutton "Quente" action Return(game.check_temperature("quente")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
 
             # Mensagem de feedback
             text "[feedback]" size 20 xalign 0.5
@@ -197,6 +206,8 @@ screen temp_game:
 # Tela do teste de oxigênio dissolvido
 screen oxygen_game:
     frame:
+        add "background_river"
+        add "sol_test_o2" at right
         xfill True
         yfill True
         vbox:
@@ -204,15 +215,21 @@ screen oxygen_game:
             yalign 0.5
             spacing 20
 
-            text "Teste de Oxigênio Dissolvido" size 30 xalign 0.5
-            text "Escolha se o nível de oxigênio na água é baixo, moderado ou alto."
+            text "Teste de Oxigênio Dissolvido" size 50 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
+            text "Escolha se o nível de oxigênio na água é baixo, moderado ou alto." size 45 color "#ffffff" outlines [(2, "#000", 0, 0)] xalign 0.5
 
             hbox:
                 xalign 0.5
                 spacing 10
-                textbutton "Baixo" action Return(game.check_oxygen("baixo"))
-                textbutton "Moderado" action Return(game.check_oxygen("moderado"))
-                textbutton "Alto" action Return(game.check_oxygen("alto"))
+                textbutton "Baixo" action Return(game.check_oxygen("baixo")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+                textbutton "Moderado" action Return(game.check_oxygen("moderado")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
+                textbutton "Alto" action Return(game.check_oxygen("alto")):
+                    text_size 40
+                    text_outlines [(2, "#000000", 0, 0)]  # Contorno preto
 
             # Mensagem de feedback
             text "[feedback]" size 20 xalign 0.5
