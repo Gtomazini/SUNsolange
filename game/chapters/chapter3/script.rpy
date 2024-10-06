@@ -11,6 +11,7 @@ define person = Character("Unknown")
 # The game starts here.
 
 label chapter3:
+    play music "audio/cafeteria.mp3" volume 0.5 fadein 2.0
     # Background scene
     scene background_coffee
     # Narrator

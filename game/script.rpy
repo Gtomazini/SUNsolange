@@ -4,10 +4,16 @@
 # name of the character.
 
 define player = Character("[player_name]")
-
+image movie = Movie(channel="movie", play="videos/sun_dust_particles_byDanCristianPădureț.webm")
 # The game starts here.
 
 label start:
+    play music "audio/begin_calm.mp3" volume 0.5 fadein 2.0
+
+
+    scene movie
+
+
 
     # Requests the player's name
     $ player_name = renpy.input("What's your name?")

@@ -44,6 +44,7 @@ label chapter1:
     player "What's she doing?"
     "Aunt Sol disappears and you hear strange noises again"
     scene background_quintal
+    play music "audio/quintal.mp3" volume 0.5 fadein 2.0
     "You're going to open the fence door"
     #som de cerca abrindo
     show AuntSol at center
