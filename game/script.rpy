@@ -22,12 +22,12 @@ label start:
 
 
     call menu
-    
+
     # Retorna ao menu principal após os créditos
     jump start
 
 label menu:
-        $ chapters_completed = set()
+    $ chapters_completed = set()
 
     while len(chapters_completed) < 3:
         menu:

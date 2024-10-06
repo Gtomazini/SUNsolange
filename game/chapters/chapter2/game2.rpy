@@ -80,3 +80,51 @@ label .correct_answer:
     if question == 3:
         "That's right! These are Stratus clouds."
     $ question += 1
+
+label .instructions:
+
+    show sol_default at center
+    
+
+    solange "Let's start with some explanations"
+
+    solange "Regardless of the area you're interested in in the GLOBE program, observation is one of the key points"
+
+    hide sol_default
+
+    show instruction_cloud at truecenter:
+        zoom 0.5   
+
+    solange "So to illustrate, let's use an image like this one:"
+
+
+
+    solange "It can be found in the cloud types section in Globe Program observability"
+
+    solange "take a closer look"
+
+    #aqui precisa remover a barra de dialogo por uma ação de click pelo menos
+
+        # Remove a barra de diálogo
+    window hide
+
+    # Pausa até que o jogador clique
+    pause
+
+    # Mostra a barra de diálogo novamente
+    window show
+
+    solange "Observing clouds is not an exact assessment due to various factors."
+
+    solange "There are several classifications, but for practical purposes we'll summarize a few"
+
+    solange "Let's start with Cirrus. Like the top of the pyramid, it's one of the highest, so it tends to be very thin."
+
+    solange "Now let's take a medium height one, like Altocumulus, which is known for tending to have a shape."
+
+    solange "And finally, a lower one, the Stratus is known for being uniform and looking like a fog."
+
+    solange "Now let's reinforce this explanation with a game."
+
+
+    return
