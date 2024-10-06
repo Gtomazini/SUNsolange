@@ -17,6 +17,7 @@ label start:
 
 
     scene movie
+    # MIXER QUERIA COLOCAR UM SOM ENQUANTO ELE DIGITA ATÉ TERMINAR, MAS TA DANDO CONFLITO COM O DEFINE PLAYER LA ENCIMA
     # ele vai digitar aos poucos
     "{cps=30}Just as the heat of the sun warms our faces regardless of distance, this is a story of mine, yours and ours.{/cps}"
 
