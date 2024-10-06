@@ -3,7 +3,7 @@ image background_coffee = "images/chapter3/coffee.png"
 # Solange
 image solange = "images/chapter3/solange/sun_coffee_empty.png"
 image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
-image solange_hc = "images/chapter3/solange/sun_coffee_hc.png"
+image solange_hc = "images/chapter3/solange/sun_coffee_hc40.png"
 
 
 # name of the character.
