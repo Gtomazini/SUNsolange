@@ -5,6 +5,7 @@
 
 define player = Character("[player_name]")
 image movie = Movie(channel="movie", play="videos/sun_dust_particles_byDanCristianPădureț.webm")
+
 # The game starts here.
 
 label start:
