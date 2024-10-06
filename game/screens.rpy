@@ -297,8 +297,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
-
+            textbutton _("Start Game") action [Play("sound", "audio/pressed_ok.wav"), Start()]
         else:
 
             textbutton _("History") action ShowMenu("history")

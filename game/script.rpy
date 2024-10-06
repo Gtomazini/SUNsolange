@@ -13,7 +13,7 @@ label start:
 
     scene movie
 
-
+    "Just as the heat of the sun warms our faces regardless of distance, this is a story of mine, yours and ours."
 
     # Requests the player's name
     $ player_name = renpy.input("What's your name?")
