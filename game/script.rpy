@@ -6,6 +6,10 @@
 define player = Character("[player_name]")
 image movie = Movie(channel="movie", play="videos/sun_dust_particles_byDanCristianPădureț.webm")
 
+
+
+
+
 # The game starts here.
 
 label start:
@@ -13,8 +17,10 @@ label start:
 
 
     scene movie
+    # MIXER QUERIA COLOCAR UM SOM ENQUANTO ELE DIGITA ATÉ TERMINAR, MAS TA DANDO CONFLITO COM O DEFINE PLAYER LA ENCIMA
+    # ele vai digitar aos poucos
+    "{cps=30}Just as the heat of the sun warms our faces regardless of distance, this is a story of mine, yours and ours.{/cps}"
 
-    "Just as the heat of the sun warms our faces regardless of distance, this is a story of mine, yours and ours."
 
     # Requests the player's name
     $ player_name = renpy.input("What's your name?")
