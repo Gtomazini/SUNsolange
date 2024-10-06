@@ -11,7 +11,6 @@ define person = Character("Unknown")
 # The game starts here.
 
 label chapter3:
-    chapter3:
     play music "audio/cafeteria.mp3" volume 0.5 fadein 2.0
     # Background scene
     scene background_coffee
@@ -60,10 +59,10 @@ label chapter3:
     # Player diálogo
     menu:
         "So what's your name? What are you doing dressed like that?":
-            call path1
+            call path1E
     return
 
-label path1:
+label path1E:
     # Solange
     solange "My name is Solange, i am a pertinent citizen concerned about our climate, and a researcher
     finishing a project for NASA *NOISE OF PRIDE*"
