@@ -4,10 +4,18 @@
 # name of the character.
 
 define player = Character("[player_name]")
-
+image movie = Movie(channel="movie", play="videos/sun_dust_particles_byDanCristianPădureț.webm")
 # The game starts here.
 
 label start:
+    window hide
+    play music "audio/begin_calm.mp3" volume 0.5 fadein 2.0
+
+    scene black
+
+    scene movie
+    window show
+
 
     # Requests the player's name
     $ player_name = renpy.input("What's your name?")
@@ -21,7 +29,7 @@ label start:
         $ player_age = renpy.input("Please enter a valid number for your age.")
     # Convert age to an integer
     $ player_age = int(player_age)
-
+    hide movie with Dissolve(2.0)
     menu:
         "Escolha um capítulo:"
         
