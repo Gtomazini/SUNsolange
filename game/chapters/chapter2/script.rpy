@@ -1,5 +1,5 @@
 # Back ground image
-image background_escola = "images/chapter2/corredor_escola.png"
+image background_escola = "images/chapter2/campus.png"
 
 # name of the character.
 
