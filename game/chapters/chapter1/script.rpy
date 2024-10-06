@@ -32,6 +32,7 @@ label chapter1:
     scene background_room
     #NARATOR
     "It's a nice day"
+    player "The sun is very strong today"
     "You hear strange noises"
     #Scream shakes
     show layer master at scream_shake
@@ -43,6 +44,7 @@ label chapter1:
     "You looked out of the window"
     scene background_solixo
     player "It's Aunt SOL"
+    player"Aunt Solange is an assistant to a renowned professor called Hélio at the University, something like that"
     player "What's she doing?"
     "Aunt Sol disappears and you hear strange noises again"
     scene background_quintal
@@ -89,11 +91,10 @@ including the carbonate system and the presence of humic and fulvic acids which 
             "No problem, you'll learn, To find out, we use a device called a pH meter!"
         "YES":   
             "Very Good,To find out, we use a device called a pH meter!"
-    sol "The pH meter looks like a ruler with a needle that moves. When we dip the tip into the water, the needle shows a number that helps us know if the water is good to drink."
-    sol "First, we need to make sure the pH meter is clean. Then, we take a glass of the water we want to test, like tap water or water from a lake."
-    sol "Now, we dip the tip of the pH meter into the water and count to three. The needle starts to move and stops at a number. This number tells us if the water is acidic, neutral, or alkaline!"
-    sol "If the needle stops at a number less than 7, the water is acidic, like lemon. If it stops at 7, the water is neutral,
-like the water we drink. If the number is greater than 7, the water is alkaline, like baking soda."
+    sol "The pH meter looks like a clear tube filled with liquid, and it comes with color indicators. When we dip the tip into the water, the color changes to show us if the water is good to drink."
+    sol "First, we need to make sure the pH meter is clean. Then, we take a glass of the water we want to test, like tap water or water from a river."
+    sol "Now, we dip the tip of the pH meter into the water and wait for a moment. The liquid in the tube changes color based on the water's pH level."
+    sol "If the liquid turns red, the water is acidic, like lemon juice. If it turns green, the water is neutral, like the water we drink. If the liquid turns blue, the water is alkaline, like baking soda."
     hide solph with moveoutright
     #o2 meter
     show sol_default at center
