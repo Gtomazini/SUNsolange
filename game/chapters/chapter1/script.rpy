@@ -12,6 +12,7 @@ image sol_ideia = "images/chapter1/sol_ideia.png"
 image sol_default = "images/chapter1/sol_default.png"
 image sol_test_ph = "images/chapter1/sol_test_ph.png"
 image sol_test_o2 = "images/chapter1/sol_test_o2.png"
+image sol_test_temp = "images/chapter1/sol_test_temp.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -135,10 +136,6 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
     menu:
         "Yes, let's get started!":
             jump start_ph_test
-        "No, maybe later.":
-            "Okay, see you next time!"
-            return
-
     # Label para chamar o mini-jogo
     label start_mini_game:
         "Let's play a mini-game!"
@@ -157,5 +154,44 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
         # Teste de pH, temperatura e oxigênio continua aqui...
 
         # This ends the game.
+    label return_label:
+    show sol_default at center
+    sol"Congratulations on achieving this feat"
+    hide sol_default
+    player "Auntie, the water in the lake looks so clean and bright! But how do we know it's safe to drink?"
+    show sol_ideia at center
+    sol "A great question! To know if water is healthy, we need to measure a few things, such as pH, temperature and transparency. And guess what? The sun influences all of this!"
 
+    menu:
+        "Really? How can the sun affect the water?":
+            sol "Yes! Let's start with pH. It tells us if the water is acidic or basic. When the sun shines brightly, it heats the water."
+            sol "As the temperature rises, it can release more gases like carbon dioxide. If it gets too hot, the water becomes more acidic. So yes, the sun can change the pH of the water!"
+
+            menu:
+                "Oh no! So if the water gets too hot, it could turn sour? That doesn't sound good!":
+                    sol "Exactly! That's why we measure the pH. Now, about the temperature: the sun heats the water, and if it’s too warm, bacteria and germs can thrive. Cold water is better for keeping them away."
+                    
+                    menu:
+                        "So, hot water can be dangerous for us?":
+                            sol "Yes, that's right! And about transparency, the sun plays an important role here too. When the water is clear, sunlight can penetrate and help aquatic plants to photosynthesize."
+                            
+                            menu:
+                                "If the water is dirty or cloudy, the sun can't help the plants, right?":
+                                    sol "Exactly! If the water is full of dirt, less light reaches the plants, harming the ecosystem. Transparency is sol good indicator of water health."
+                                    
+                                    menu:
+                                        "Got it! Measuring pH, temperature, and transparency is like giving the water sol check-up, right?":
+                                            sol "Exactly! This is part of the GLOBE Protocol, where people worldwide measure water quality to understand how the sun and other factors affect aquatic environments."
+                                            
+                                            menu:
+                                                "That’s really cool! So if the water is healthy, the sun can help life grow!":
+                                                    sol "Yes! Healthy water and sunlight work together to support plant and animal life. And you can help monitor water quality to protect our environment!"
+                                                    
+                                                    menu:
+                                                        "I’m going to tell my friends how we can care for our river! Measuring pH, temperature, and transparency sounds fun!":
+                                                            sol "Absolutely! Let’s do it together and take care of the water we all need to live. The sun, water, and life are all connected!"
+    hide sol_ideia
+    show sol_default                                                       
+    sol "teste"
     return
+
