@@ -29,7 +29,31 @@ define config.version = "1.1"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Sons of Light
+
+its a free open source game to the NASA Space Apps 2024 edition.
+
+Powered by the Baccuri Lattes team:
+
+Gabriel Tomazini Ferreira
+
+Matheus Francisco Ferreira dos Santos
+
+Nathan Raposo Pereira Martins De Almeida
+
+Eric Guilherme dos Santos Pontes Nunes
+
+Guilherme Rodrigues
+
+
+Soundtrack:
+
+Menu/Begin Music - Forest by Sirental
+
+Garden Music -  DavidKBD - Tropical Pack - 01 - Spring Romance - Acoustic
+
+Cafeteria - Jazz Bossa Nova by Lolurio
+
 """)
 
 
