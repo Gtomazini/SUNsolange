@@ -15,7 +15,6 @@ label chapter2:
 # Falling sound
     "CRAMB CRAMB TCHUMM"
     player "What was that?!"
-# Image of the fallen veteran
 # Background scene
     scene sol_caida
     player "'What's she doing?'"
