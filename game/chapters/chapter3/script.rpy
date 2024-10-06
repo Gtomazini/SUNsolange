@@ -70,3 +70,33 @@ label path1:
     
     # Player
     player "...ok, and what are you doing here right now? Shouldn't you be in your lab?"
+
+    # Solange
+    solange "Yes hahaha..! I'm just taking a break, there's so much GLOBE Protocol data to analyze...I
+    needed a coffee before cotinuing"
+
+    # Player diálogo 2
+    menu:
+        "GLOBE Protocol??":
+            call path1_1
+        "Oh, that NASA sponsored GLOBE Protocol??":
+            call path1_2
+        "Oh yes, the GLOBE Protocol that defines global laws!":
+            call path1_3
+    return
+
+label path1_1:
+    # Solange
+    solange ""
+
+    return
+
+label path1_2:
+    # Solange
+    solange ""
+
+    return
+
+label path1_3:
+    # Solange
+    solange ""
