@@ -57,6 +57,11 @@ label game2:
                 "That's right! These are Stratus clouds."
 
     "Congratulations! You have completed the Cloud Quiz. Your final score is [score] out of 3."
+    
+    "Remember! Identification will not always be simple, our friend the sun can have an impact 
+    on the development of formats, this happens up there for those who see from the satellites too."
+
+    
 
 
 # precisa retornar pro script do chapter 2 e terminar o dialogo
