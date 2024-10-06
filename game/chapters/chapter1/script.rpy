@@ -5,6 +5,8 @@ image background_solixo = "images/chapter1/quintal_lixo.png"
 image AuntSol = "images/chapter3/solange/sun_coffee1.png"
 image background_river = "images/chapter1/quintal_fundos.png" 
 image solph = "images/chapter1/solange_ph.png"
+image solo2 = "images/chapter1/sol_o2.png"
+image solthermo = "images/chapter1/so_thermo.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -69,19 +71,21 @@ including the carbonate system and the presence of humic and fulvic acids which 
     scene background_river
     #PICTURE OF PHMETER
     show solph at right
-    sol "Did you know that water can be acidic, neutral, or alkaline? To find out, we use a device called a pH meter!"
+    sol "Did you know that water can be acidic, neutral, or alkaline?"
     menu :
         "No":
-            "No problem, you'll learn"
+            "No problem, you'll learn, To find out, we use a device called a pH meter!"
         "YESSS":   
-            "Let's GOoooo"
+            "To find out, we use a device called a pH meter!"
     sol "The pH meter looks like a ruler with a needle that moves. When we dip the tip into the water, the needle shows a number that helps us know if the water is good to drink."
     sol "First, we need to make sure the pH meter is clean. Then, we take a glass of the water we want to test, like tap water or water from a lake."
     sol "Now, we dip the tip of the pH meter into the water and count to three. The needle starts to move and stops at a number. This number tells us if the water is acidic, neutral, or alkaline!"
     sol "If the needle stops at a number less than 7, the water is acidic, like lemon. If it stops at 7, the water is neutral,
 like the water we drink. If the number is greater than 7, the water is alkaline, like baking soda."
     #o2 meter
+    show AuntSol at center
     sol "Now let's learn about the water oxygen meter"
+    show solo2 at right
     sol "First, we need to prepare the meter. It should be nice and clean to work properly!"
     # Image of a glass of water
     sol "Now, let's get a glass of water. It  from the river. Let's go!"
@@ -92,8 +96,10 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
     # Image of the meter showing the result
     sol "Look! The number that appears on the meter tells us if the water has enough oxygen. The higher, the better!"
     #thermal
+    show AuntSol at center
     sol "And finally, let's learn about the water temperature gauge"
-    # Image of the thermometer being prepared
+    # Image of the thermometer being preparer
+    show solthermo at left
     sol "First, we need to prepare the thermometer. Just like the oxygen meter, it also needs to be clean."
     # Image of a glass of water
     sol "Next, let's get a glass of water. It can be tap water or water from a lake. Let's use a full glass!"
