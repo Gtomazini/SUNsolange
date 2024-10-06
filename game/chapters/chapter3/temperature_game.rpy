@@ -70,18 +70,21 @@ label temperature_game:
         menu:
             solange "Which of the three glasses is the hottest??"
             "The one in the table":
+                $ renpy.play("audio/sucess.mp3", channel="sound")
                 $ score += 1
                 hide sun_thermo
                 show solange_h at center
                 solange "That's right! The wooden table retains more heat and transfers it to the glass more
                 than the others."
             "The one in the cup holder":
+                $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
                 solange "Try again! The cup holder, despite having received heat from the sun, is an excellent
                 thermal insulator. It heats up, but doesn't transfer heat efficiently to the cup like the
                 wooden table, keeping the bottom of the cup relatively insulated."
                 jump .quiz1
             "The other one on the table, but which has a metallic sound when it's been placed":
+                $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
                 solange "Almost! This glass have a aluminum foil under him. Even though aluminum
                 is a good conductor, its reflective surface means that it absorbs less heat from
@@ -98,6 +101,7 @@ label temperature_game:
             solange "Three surfaces are exposed to direct sunlight for 30 minutes: one of asphalt, one of grass and one of sand.
                     Which surface will get hotter?"
             "Sand":
+                $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
                 solange "Wrong! Sand also gets very hot, but not as hot as asphalt."
                 player "But I also burn my feet when I go to the beach and step on the sand!"
@@ -105,10 +109,12 @@ label temperature_game:
                 solange "Sand also loses heat more quickly and is less dense than asphalt."
                 jump .quiz2
             "Grass":
+                $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
                 solange "Incorrect! Grass absorbs less heat and also cools down due to moisture evaporation."
                 jump .quiz2
             "Asphalt":
+                $ renpy.play("audio/sucess.mp3", channel="sound")
                 hide sun_confused
                 show solange_h at center
                 $ score += 1
@@ -122,11 +128,13 @@ label temperature_game:
         menu:
             solange "After 20 minutes, which one will show the greatest change in temperature compared to the initial environment?"
             "Metal plate":
+                $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
                 solange "Wanna try put your hand at a metal plate after getting sunlight for 20 minutes?"
                 player "Ehh...better not!!"
                 jump .quiz3
             "Sheet of white paper":
+                $ renpy.play("audio/sucess.mp3", channel="sound")
                 hide sun_confused
                 show solange_h at center
                 $ score += 1

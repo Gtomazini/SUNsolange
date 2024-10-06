@@ -16,9 +16,15 @@ label game2:
     return
 
 label .question:
-    call .question1
-    call .question2
-    call .question3 
+    $ finish = False
+    $ question = 1
+    while not finish:
+        if question == 1:
+            call .question1
+        if question == 2:
+            call .question2
+        if question == 3:
+            call .question3
     return
 
 label .question1:
@@ -26,45 +32,49 @@ label .question1:
     menu:
         "What kind of cloud is it?"
         "Cirrus":
-            "That's right! These are Cirrus clouds."
+            call .correct_answer
         "Altocumulus":
-            jump .wrong_answer1
+            call .wrong_answer
         "Stratus":
-            jump .wrong_answer1
+            call .wrong_answer
     return
-
-label .wrong_answer1:
-    "Incorrect. Let's try again."
-    jump .question1        
 
 label .question2:
     show altocumulus_cloud at truecenter
     menu:
         "How about that?"
         "Cirrus":
-            jump .wrong_answer2
+            call .wrong_answer
         "Altocumulus":
-            "That's right! These are Altocumulus clouds."
+            call .correct_answer
         "Stratus":
-            jump .wrong_answer2
+            call .wrong_answer
     return
-
-label .wrong_answer2:
-    "Incorrect. Let's try again."
-    jump .question2     
 
 label .question3:
     show stratus_cloud at truecenter
     menu:
         "The final question! What kind of cloud is it?"
         "Cirrus":
-            jump .wrong_answer3
+            call .wrong_answer
         "Altocumulus":
-            jump .wrong_answer3
+            call .wrong_answer
         "Stratus":
-            "That's right! These are Stratus clouds."
+            call .correct_answer
+            $ finish = True
     return
 
-label .wrong_answer3:
+label .wrong_answer:
+    play sound "errou.mp3" volume 0.5
     "Incorrect. Let's try again."
-    jump .question3   
+    return
+
+label .correct_answer:
+    play sound "sucess.mp3" volume 0.5
+    if question == 1:
+        "That's right! These are Cirrus clouds."
+    if question == 2:
+        "That's right! These are Altocumulus clouds."
+    if question == 3:
+        "That's right! These are Stratus clouds."
+    $ question += 1
