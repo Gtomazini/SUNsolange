@@ -297,17 +297,16 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
-
+            textbutton _("Start Game") action [Play("sound", "audio/pressed_ok.wav"), Start()]hovered Play("sound", "audio/select_item.mp3")
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("History") action ShowMenu("history")hovered Play("sound", "audio/select_item.mp3")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save")hovered Play("sound", "audio/select_item.mp3")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Load") action ShowMenu("load")hovered Play("sound", "audio/select_item.mp3")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Preferences") action ShowMenu("preferences")hovered Play("sound", "audio/select_item.mp3")
 
         if _in_replay:
 
@@ -317,18 +316,18 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("About") action ShowMenu("about")hovered Play("sound", "audio/select_item.mp3")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Help") action ShowMenu("help")hovered Play("sound", "audio/select_item.mp3")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("Quit") action Quit(confirm=not main_menu)hovered Play("sound", "audio/select_item.mp3")
 
 
 style navigation_button is gui_button
