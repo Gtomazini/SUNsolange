@@ -10,6 +10,8 @@ define solange = Character("Solange")
 label chapter2:
 # Background scene
     scene background_escola
+
+    player "Today is a brilliant day!"
 # Scream shake
     show layer master at scream_shake
 # Falling sound
@@ -141,6 +143,8 @@ label .path3:
             solange "Come on, knowledge never hurts"
             hide sol_default
             call game2
+
+            
     return
         
 

@@ -126,7 +126,7 @@ label temperature_game:
         show sun_confused at right
         solange "Imagine that you have a sheet of white paper and a metal plate placed side by side in bright sunlight."
         menu:
-            solange "After 20 minutes, which one will show the greatest change in temperature compared to the initial environment?"
+            solange "After 20 minutes, which one will show the lowest change in temperature compared to the initial environment?"
             "Metal plate":
                 $ renpy.play("audio/ERROU.mp3", channel="sound")
                 show layer master at scream_shake
@@ -145,4 +145,4 @@ label temperature_game:
     show solange at center
     solange "Well, I enjoyed meeting you, but now I have to finish my project, I hope we can meet again! Bye bye!"
     
-    jump start
+return

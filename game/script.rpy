@@ -1,26 +1,11 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
+﻿# The game starts here.
 define player = Character("[player_name]")
 image movie = Movie(channel="movie", play="videos/sun_dust_particles_byDanCristianPădureț.webm")
-
-
-
-
-
-# The game starts here.
-
 label start:
     play music "audio/begin_calm.mp3" volume 0.5 fadein 2.0
 
-
     scene movie
-    # MIXER QUERIA COLOCAR UM SOM ENQUANTO ELE DIGITA ATÉ TERMINAR, MAS TA DANDO CONFLITO COM O DEFINE PLAYER LA ENCIMA
-    # ele vai digitar aos poucos
     "{cps=30}Just as the heat of the sun warms our faces regardless of distance, this is a story of mine, yours and ours.{/cps}"
-
 
     # Requests the player's name
     $ player_name = renpy.input("What's your name?")
@@ -35,20 +20,60 @@ label start:
     # Convert age to an integer
     $ player_age = int(player_age)
 
-    menu:
-        "Escolha um capítulo:"
-        
-        "Capítulo 1":
-            call chapter1
-        
-        "Capítulo 2":
-            call chapter2
-        
-        "Capítulo 3":
-            call chapter3
+
+    call menu
     
-    # Após retornar de um capítulo, volta ao menu principal
+    # Retorna ao menu principal após os créditos
     jump start
+
+label menu:
+        $ chapters_completed = set()
+
+    while len(chapters_completed) < 3:
+        menu:
+            "Escolha um capítulo:"
+            
+            "Capítulo 1" if "1" not in chapters_completed:
+                call chapter1
+                $ chapters_completed.add("1")
+            
+            "Capítulo 2" if "2" not in chapters_completed:
+                call chapter2
+                $ chapters_completed.add("2")
+            
+            "Capítulo 3" if "3" not in chapters_completed:
+                call chapter3
+                $ chapters_completed.add("3")
+            
+            "Voltar ao menu principal":
+                jump start
+
+    # Após completar todos os capítulos, mostra os créditos
+    call credits
+
+label credits:
+    scene black
+    with fade
+
+    show text "{size=40}Créditos{/size}" at truecenter
+    with dissolve
+    pause 2.0
+
+    show text "{size=30}Desenvolvido por:\nSua Equipe{/size}" at truecenter
+    with dissolve
+    pause 2.0
+
+    show text "{size=30}Agradecimentos especiais:\nNASA\nGLOBE Program{/size}" at truecenter
+    with dissolve
+    pause 2.0
+
+    show text "{size=30}Música:\nCompositor X\nCompositor Y{/size}" at truecenter
+    with dissolve
+    pause 2.0
+
+    show text "{size=40}Obrigado por jogar!{/size}" at truecenter
+    with dissolve
+    pause 3.0
 
     return
 

@@ -2,9 +2,11 @@
 image cirrus_cloud = "images/chapter2/cirrus_cloud.jpg"
 image altocumulus_cloud = "images/chapter2/altocumulus_cloud.jpg"
 image stratus_cloud = "images/chapter2/stratus_cloud.jpg"
-
+image instruction_cloud = "images/chapter2/cloud_chart.png"
 label game2:
     "Welcome to the Cloud Quiz! Let's test your knowledge of cloud types."
+
+    call .instructions
     
     call .question
 
@@ -79,3 +81,7 @@ label .correct_answer:
     if question == 3:
         "That's right! These are Stratus clouds."
     $ question += 1
+
+
+label .instructions:
+    solange "Let's start with some explanations"
