@@ -1,10 +1,9 @@
 # Back ground image
 image background_coffee = "images/chapter3/coffee.png"
 # Solange
-image solange = "images/chapter3/solange/sun_coffee_empty.png"
+image solange = "images/chapter3/solange/sun_coffee.png"
 image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
 image solange_hc = "images/chapter3/solange/sun_coffee_hc40.png"
-
 
 # name of the character.
 
@@ -18,7 +17,7 @@ label chapter3:
     # Background scene
     scene background_coffee
     # Narrator
-    person "*GLASH* *GLUP* *GLAP*"
+    person "*GLUP* *GLUP* *GLAP*"
     # Player
     player "What was that?"
 
@@ -101,7 +100,7 @@ label pathE1:
     show solange
     solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
     as its variations depending on the location and materials affected by sunlight. I'll show you an example"
-    jump start_temp_game
+    call temperature_game
 
 label pathE2:
     # Solange
@@ -116,7 +115,7 @@ label pathE2:
     show solange
     solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
     as its variations depending on the location and materials affected by sunlight. I'll show you an example"
-    jump start_temp_game
+    call temperature_game
 
 label pathE3:
     # Solange
@@ -127,6 +126,6 @@ label pathE3:
     show solange
     solange "Globe Protocol is not about global law programs, but rather a global
     effort to collect data about our environment, I'll show you an example!"
-    jump start_temp_game
+    call temperature_game
 
     return

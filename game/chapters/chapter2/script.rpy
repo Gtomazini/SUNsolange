@@ -30,22 +30,22 @@ label chapter2:
     solange "Yes, I'm fine, thank you!"
     menu:      
         "See you later!":
-            call path1     
+            call .path1     
         
         "I see you're well, what are you doing?":
-            call path2 
+            call .path2 
     return
 
-label path1:
+label .path1:
     solange "Wait, I need your help!"
     menu:       
         "Of course, what do you need?":
-            call    path101
+            call    .path101
         "I don't know, what do you have in mind?":
-            call    path102
+            call    .path102
     return
 
-label path101:
+label .path101:
     solange "Great that you asked! The GLOBE Protocol is a global program that connects ordinary people 
             with scientists to study our planet. Basically, you learn how to collect local environmental data
             in a standardized way."
@@ -55,10 +55,10 @@ label path101:
     solange "The best thing is that anyone can take part, not just professional scientists. You learn about
             the environment, develop scientific skills and contribute to important research. 
             How about becoming a citizen scientist and taking part?"
-    call    path3
+    call    .path3
     return
 
-label path102:
+label .path102:
     $ pause_time = 1.5
     solange "Oh, good of you to ask! The GLOBE Protocol is something fascinating that brings together science,
             education and global environmental action.{w=[pause_time]}{nw}"
@@ -81,15 +81,17 @@ label path102:
 
     menu:
         "Yes":
-            return
+            call game2
+            return            
         "Of course":
-            return
+            call game2
+            return                    
         "Why do you only have the option to agree???":      
-            return
+            call game2
+            return                    
 
-    call game2
             
-label path2:
+label .path2:
     solange "Hmm... I see you have a scientific mind, point for you"
     solange "I'm actually working on the GLOBE Protocol. It's a fascinating program that brings ordinary 
             people and scientists together to study our planet. You collect local environmental data in a 
@@ -99,14 +101,13 @@ label path2:
             It's like being part of a global team of citizen scientists!"
     solange "The best thing is that anyone can take part, learn about the environment and make a real 
             difference. Interested in joining this global network of environmental observers?"
-    call    path3
+    call    .path3
     return
 
-label path3:
+label .path3:
     player "So what do we do?"
     solange "Let's learn about an essential factor in GLOBE Protocol readings, atmospheric data!"
 
-    # Precisa fazer um menu de perguntas que volta ao mesmo menu depois da pergunta e as opções já perguntadas aparecem como marcadas
     # O QUE FALTA - LINKAR IMAGENS DAS NUVENS DO GAME2 COM NUVENS DO GLOBE IMAGES DA NASA
     # COLOCAR OS SONS DE ACERTO E ERRO
 
@@ -120,7 +121,7 @@ label path3:
         "I don't know...":      
             solange "Come on, knowledge never hurts"
             call game2
-
+    return
         
 
         
