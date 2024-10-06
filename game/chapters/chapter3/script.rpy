@@ -101,6 +101,7 @@ label pathE1:
     solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
     as its variations depending on the location and materials affected by sunlight. I'll show you an example"
     call temperature_game
+    return
 
 label pathE2:
     # Solange
@@ -116,6 +117,7 @@ label pathE2:
     solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
     as its variations depending on the location and materials affected by sunlight. I'll show you an example"
     call temperature_game
+    return
 
 label pathE3:
     # Solange

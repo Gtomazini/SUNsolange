@@ -16,15 +16,9 @@ label game2:
     return
 
 label .question:
-    $ finish = False
-    $ question = 1
-    while not finish:
-        if question == 1:
-            call .question1
-        if question == 2:
-            call .question2
-        if question == 3:
-            call .question3
+    call .question1
+    call .question2
+    call .question3 
     return
 
 label .question1:
@@ -32,50 +26,45 @@ label .question1:
     menu:
         "What kind of cloud is it?"
         "Cirrus":
-            call .correct_answer
+            "That's right! These are Cirrus clouds."
         "Altocumulus":
-            call .wrong_answer
+            jump .wrong_answer1
         "Stratus":
-            call .wrong_answer
+            jump .wrong_answer1
     return
+
+label .wrong_answer1:
+    "Incorrect. Let's try again."
+    jump .question1        
 
 label .question2:
     show altocumulus_cloud at truecenter
     menu:
         "How about that?"
         "Cirrus":
-            call .wrong_answer
+            jump .wrong_answer2
         "Altocumulus":
-            call .correct_answer
+            "That's right! These are Altocumulus clouds."
         "Stratus":
-            call .wrong_answer
+            jump .wrong_answer2
     return
 
+label .wrong_answer2:
+    "Incorrect. Let's try again."
+    jump .question2     
+
 label .question3:
-    show stratus_cloud:
-        size (config.screen_width, config.screen_height)
-        align (0.5, 0.5)
+    show stratus_cloud at truecenter
     menu:
         "The final question! What kind of cloud is it?"
         "Cirrus":
-            call .wrong_answer
+            jump .wrong_answer3
         "Altocumulus":
-            call .wrong_answer
+            jump .wrong_answer3
         "Stratus":
-            call .correct_answer
-            $ finish = True
-    return
-label .wrong_answer:
-    play sound "errou.mp3" volume 0.5
-    "Incorrect. Let's try again."
+            "That's right! These are Stratus clouds."
     return
 
-label .correct_answer:
-    play sound "sucess.mp3" volume 0.5
-    if question == 1:
-        "That's right! These are Cirrus clouds."
-    if question == 2:
-        "That's right! These are Altocumulus clouds."
-    if question == 3:
-        "That's right! These are Stratus clouds."
-    $ question += 1
+label .wrong_answer3:
+    "Incorrect. Let's try again."
+    jump .question3   
