@@ -39,8 +39,6 @@ label .question1:
             call .wrong_answer
     return
 
-      
-
 label .question2:
     show altocumulus_cloud at truecenter
     menu:
@@ -52,7 +50,6 @@ label .question2:
         "Stratus":
             call .wrong_answer
     return
-
 
 label .question3:
     show stratus_cloud at truecenter
