@@ -103,6 +103,13 @@ label path2:
     return
 
 label path3:
+    player "So what do we do?"
+    solange "Let's learn about an essential factor in GLOBE Protocol readings, atmospheric data!"
+
+    # Precisa fazer um menu de perguntas que volta ao mesmo menu depois da pergunta e as opções já perguntadas aparecem como marcadas
+    # O QUE FALTA - LINKAR IMAGENS DAS NUVENS DO GAME2 COM NUVENS DO GLOBE IMAGES DA NASA
+    # COLOCAR OS SONS DE ACERTO E ERRO
+
     menu:
         "Sure, that would be nice!":
             solange "Come closer my young paduan"
