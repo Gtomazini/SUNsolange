@@ -8,7 +8,8 @@ label temperature_game:
     $ score = 0
     $ questions = 3
 
-    scene water
+    scene background_coffee with fade
+    scene water with fade
     solange "There! A good example to explain a little about my project."
 
     menu:
@@ -64,6 +65,7 @@ label temperature_game:
     label .quiz1:
         $ questions -= 1
         hide thermo
+        hide solange
         show sun_thermo at right
         menu:
             solange "Which of the three glasses is the hottest??"
@@ -100,7 +102,7 @@ label temperature_game:
                 solange "Wrong! Sand also gets very hot, but not as hot as asphalt."
                 player "But I also burn my feet when I go to the beach and step on the sand!"
                 solange "Sand is usually lighter in color than asphalt, so it absorbs less heat because it reflects more sunlight than asphalt."
-                solange "Além de a areia perder calor mais rapidamente e ser menos densa que o asfalto."
+                solange "Sand also loses heat more quickly and is less dense than asphalt."
                 jump .quiz2
             "Grass":
                 show layer master at scream_shake
@@ -134,4 +136,5 @@ label temperature_game:
     hide solange_h
     show solange at center
     solange "Well, I enjoyed meeting you, but now I have to finish my project, I hope we can meet again! Bye bye!"
+    
     call credits

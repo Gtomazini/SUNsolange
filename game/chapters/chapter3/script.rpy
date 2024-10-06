@@ -5,7 +5,6 @@ image solange = "images/chapter3/solange/sun_coffee.png"
 image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
 image solange_hc = "images/chapter3/solange/sun_coffee_hc40.png"
 
-
 # name of the character.
 
 define solange = Character("Solange")
