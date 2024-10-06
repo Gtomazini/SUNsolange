@@ -16,6 +16,7 @@ label temperature_game:
             call pathE4
         
     label pathE4:
+        hide solange
         show sun_confused at center
         "*SOLANGE SEENS CONFUSED ABOUT YOUR QUESTION*"
         show layer master at scream_shake
@@ -133,5 +134,4 @@ label temperature_game:
     hide solange_h
     show solange at center
     solange "Well, I enjoyed meeting you, but now I have to finish my project, I hope we can meet again! Bye bye!"
-
-    return
+    call credits
