@@ -1,7 +1,10 @@
 # Back ground image
 image background_coffee = "images/chapter3/coffee.png"
 # Solange
-image solange = "images/chapter3/solange/sun_coffee1.png"
+image solange = "images/chapter3/solange/sun_coffee_empty.png"
+image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
+image solange_hc = "images/chapter3/solange/sun_coffee_hc40.png"
+
 
 # name of the character.
 
@@ -59,10 +62,10 @@ label chapter3:
     # Player diálogo
     menu:
         "So what's your name? What are you doing dressed like that?":
-            call path1E
+            call pathE
     return
 
-label path1E:
+label pathE:
     # Solange
     solange "My name is Solange, i am a pertinent citizen concerned about our climate, and a researcher
     finishing a project for NASA *NOISE OF PRIDE*"
@@ -77,25 +80,53 @@ label path1E:
     # Player diálogo 2
     menu:
         "GLOBE Protocol??":
-            call path1_1
+            call pathE1
         "Oh, that NASA sponsored GLOBE Protocol??":
-            call path1_2
+            call pathE2
         "Oh yes, the GLOBE Protocol that defines global laws!":
-            call path1_3
+            call pathE3
     return
 
-label path1_1:
+label pathE1:
     # Solange
-    solange ""
+    hide solange
+    show solange_hc
+    solange "Yes, the GLOBE Protocol is a program where ordinary people collect environmental data,
+    such as surface temperature, using scientific methods. My project simulates, on a small scale,
+    what GLOBE studies globally. This helps understand how different surfaces affect local and global climate."
+
+    player "So..what are your project based on?"
+
+    hide solange_hc
+    show solange
+    solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
+    as its variations depending on the location and materials affected by sunlight. I'll show you an example"
+    jump start_temp_game
+
+label pathE2:
+    # Solange
+    hide solange
+    show solange_h at center
+    solange "YES!! I don't believe i found someone who knows and cares about environmental issues!!
+    Points for you!!"
+
+    player "So..what are your project based on?"
+
+    hide solange_h
+    show solange
+    solange "My project aims to measure the environmental impacts caused by temperature on the ground, as well
+    as its variations depending on the location and materials affected by sunlight. I'll show you an example"
+    jump start_temp_game
+
+label pathE3:
+    # Solange
+    hide solange
+    show solange_hc
+    solange "No ! No, that's not it, if it were a test you'd get a zero hahaha"
+    hide solange_hc
+    show solange
+    solange "Globe Protocol is not about global law programs, but rather a global
+    effort to collect data about our environment, I'll show you an example!"
+    jump start_temp_game
 
     return
-
-label path1_2:
-    # Solange
-    solange ""
-
-    return
-
-label path1_3:
-    # Solange
-    solange ""
