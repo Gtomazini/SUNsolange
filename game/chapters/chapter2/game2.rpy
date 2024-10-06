@@ -52,7 +52,9 @@ label .question2:
     return
 
 label .question3:
-    show stratus_cloud at truecenter
+    show stratus_cloud:
+        size (config.screen_width, config.screen_height)
+        align (0.5, 0.5)
     menu:
         "The final question! What kind of cloud is it?"
         "Cirrus":
@@ -63,7 +65,6 @@ label .question3:
             call .correct_answer
             $ finish = True
     return
-
 label .wrong_answer:
     play sound "errou.mp3" volume 0.5
     "Incorrect. Let's try again."

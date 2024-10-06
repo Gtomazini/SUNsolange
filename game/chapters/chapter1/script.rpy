@@ -52,11 +52,11 @@ label chapter1:
     "You're going to open the fence door"
     #som de cerca abrindo
     show AuntSol at center
-    "Aunt Sol look sad because my ph meter is broken"
+    "Aunt Sol look sad because her ph meter is broken"
     player "What's happening ?"
     hide AuntSol with moveoutright
     "Aunt Sol have an idea and disappears"
-    "Glass and plastic noises from unboxing"
+    "GLASS AND PLASTIC NOISES FROM UNBOXING SOMETHING"
     show solph at right
     #SOL IMAGE WITH A NEW PH MESUIR
     sol "Here, take a sample for me"
@@ -165,7 +165,7 @@ including the carbonate system and the presence of humic and fulvic acids which 
 
     menu:
         "Really? How can the sun affect the water?":
-            sol "Yes! Let's start with pH. It tells us if the water is acidic or basic. When the sun shines brightly, it heats the water."
+            sol "Let's see! Starting with pH. It tells us if the water is acidic or basic. When the sun shines brightly, it heats the water."
             sol "As the temperature rises, it can release more gases like carbon dioxide. If it gets too hot, the water becomes more acidic. So yes, the sun can change the pH of the water!"
 
             menu:
@@ -178,10 +178,10 @@ including the carbonate system and the presence of humic and fulvic acids which 
                             
                             menu:
                                 "If the water is dirty or cloudy, the sun can't help the plants, right?":
-                                    sol "Exactly! If the water is full of dirt, less light reaches the plants, harming the ecosystem. Transparency is sol good indicator of water health."
+                                    sol "Exactly! If the water is full of dirt, less light reaches the plants, harming the ecosystem. Transparency is 'sol' good indicator of water health."
                                     
                                     menu:
-                                        "Got it! Measuring pH, temperature, and transparency is like giving the water sol check-up, right?":
+                                        "Got it! Measuring pH, temperature and transparency is like doing a water check-up, right?":
                                             sol "Exactly! This is part of the GLOBE Protocol, where people worldwide measure water quality to understand how the sun and other factors affect aquatic environments."
                                             
                                             menu:
