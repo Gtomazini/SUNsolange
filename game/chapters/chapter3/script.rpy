@@ -1,7 +1,9 @@
 # Back ground image
 image background_coffee = "images/chapter3/coffee.png"
 # Solange
-image solange = "images/chapter3/solange/sun_coffee1.png"
+image solange = "images/chapter3/solange/sun_coffee_empty.png"
+# Solange
+image solange_h = "images/chapter3/solange/sun_coffee_happy.png"
 
 # name of the character.
 
@@ -59,10 +61,10 @@ label chapter3:
     # Player diálogo
     menu:
         "So what's your name? What are you doing dressed like that?":
-            call path1E
+            call pathE
     return
 
-label path1E:
+label pathE:
     # Solange
     solange "My name is Solange, i am a pertinent citizen concerned about our climate, and a researcher
     finishing a project for NASA *NOISE OF PRIDE*"
@@ -77,25 +79,27 @@ label path1E:
     # Player diálogo 2
     menu:
         "GLOBE Protocol??":
-            call path1_1
+            call pathE1
         "Oh, that NASA sponsored GLOBE Protocol??":
-            call path1_2
+            call pathE2
         "Oh yes, the GLOBE Protocol that defines global laws!":
-            call path1_3
+            call pathE3
     return
 
-label path1_1:
+label pathE1:
     # Solange
     solange ""
 
     return
 
-label path1_2:
+label pathE2:
     # Solange
-    solange ""
+    show solange_h at center
+    solange "YES!! I don't believe i found someone who knows and cares about environmental issues!!
+    Points for you!!"
 
     return
 
-label path1_3:
+label pathE3:
     # Solange
     solange ""
