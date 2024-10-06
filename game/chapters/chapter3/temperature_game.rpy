@@ -137,4 +137,4 @@ label temperature_game:
     show solange at center
     solange "Well, I enjoyed meeting you, but now I have to finish my project, I hope we can meet again! Bye bye!"
     
-    call credits
+    jump start
