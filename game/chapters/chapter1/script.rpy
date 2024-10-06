@@ -7,6 +7,7 @@ image background_river = "images/chapter1/quintal_fundos.png"
 image solph = "images/chapter1/solange_ph.png"
 image solo2 = "images/chapter1/sol_o2.png"
 image solthermo = "images/chapter1/so_thermo.png"
+image sol_thermo_water = "images/chapter1/sol_thermo_water.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -101,7 +102,7 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
     # Image of the thermometer being preparer
     show solthermo at left
     sol "First, we need to prepare the thermometer. Just like the oxygen meter, it also needs to be clean."
-    # Image of a glass of water
+    show sol_thermo_water at center
     sol "Next, let's get a glass of water. It can be tap water or water from a lake. Let's use a full glass!"
 
     # Image of the thermometer being used
@@ -109,7 +110,7 @@ like the water we drink. If the number is greater than 7, the water is alkaline,
 
     # Image of the thermometer showing the result
     sol "See! The number that appears on the thermometer tells us if the water is cold, warm, or hot."
-
+    show AuntSol at center
     sol "Now to the challenge"
     #botão de iniciar
 
